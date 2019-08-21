@@ -73,7 +73,7 @@ dependencies {
 | `dropPerSecond` | This attribute determines how many drops per second. You can value the data type Int. (by default 100) |
 | `durationOfDropTime` | This attribute determines the number of seconds the drop will drop to the floor. You can value the data type Int-milisecond.(by default 500)|
 | `dropSrc` | This attribute change the view of the drop.|
-| `dropTintColor` | The attribute change the color of the drop (by default @android:color/white/|
+| `dropTintColor` | The attribute change the color of the drop (by default @android:color/white)|
 
 ## License
 The Apache License 2.0 - see [`LICENSE`](LICENSE) for more details
