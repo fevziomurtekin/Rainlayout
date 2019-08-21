@@ -38,7 +38,7 @@ dependencies {
         super.onStop()
         rainview.animationClear()
     }
-
+```
 
 
 ## Layout
