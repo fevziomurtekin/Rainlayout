@@ -31,6 +31,16 @@ dependencies {
 }
 ```
 
+> Warning : To Stop the animation in Activity / Fragment changes!
+
+```kotlin
+    override fun onStop() {
+        super.onStop()
+        rainview.animationClear()
+    }
+
+
+
 ## Layout
 
 ```xml
