@@ -10,7 +10,7 @@ Constraintlayout based, rain animated layout's
 # Demo
 
 <p align="center">
-<img src="https://github.com/fevziomurtekin/RainLayout/blob/master/art/record.gif" width="270"  height="480" />
+<img src="https://media.giphy.com/media/UqqwiBQS31268sI9UU/giphy.gif" width="270"  height="480" />
 </p>
 
 # Setup
@@ -68,7 +68,7 @@ dependencies {
 | --- | --- |
 | `isColorful` | This attribute makes the drop colorful. You can choose true or false (by default false) | 
 | `dropPerSecond` | This attribute determines how many drops per second. You can value the data type Int. (by default 100) |
-| `durationOfDropTime` | This attribute determines the number of seconds the drop will drop to the floor. You can value the data type Int.(by default 500)|
+| `durationOfDropTime` | This attribute determines the number of seconds the drop will drop to the floor. You can value the data type Int-milisecond.(by default 500)|
 | `dropSrc` | This attribute change the view of the drop.|
 | `dropTintColor` | The attribute change the color of the drop (by default @android:color/white/|
 
