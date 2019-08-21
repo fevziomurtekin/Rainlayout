@@ -1,7 +1,6 @@
 # Rainlayout
 
-Constraintlayout based, rain animated layout's
-
+Constraintlayout based rain-animation view developed using Coroutine.
 
 <br>
 
