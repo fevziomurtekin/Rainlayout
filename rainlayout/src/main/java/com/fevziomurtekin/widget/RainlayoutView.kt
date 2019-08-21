@@ -12,7 +12,7 @@ import kotlinx.coroutines.*
 class RainlayoutView : ConstraintLayout {
 
     /** attributes of layout **/
-    private var rainSrc = resources.getDrawable(R.drawable.ic_umbrella)
+    private var dropSrc = resources.getDrawable(R.drawable.ic_umbrella)
     private var dropPerSecond = 10
     private var dropTintColor = resources.getColor(android.R.color.white)
     private var fallToDropTime = 100
@@ -35,7 +35,7 @@ class RainlayoutView : ConstraintLayout {
 
     private fun init(context: Context?,attrs:AttributeSet?,defStyleAttr: Int,defStyleRes: Int){
         context?.theme?.obtainStyledAttributes(attrs,R.styleable.rain,defStyleAttr,defStyleRes)?.let {
-            rainSrc = it.getDrawable(R.styleable.rain_rainSrc)
+            dropSrc = it.getDrawable(R.styleable.rain_dropSrc)
             dropPerSecond = it.getInt(R.styleable.rain_dropPerSecond,10)
             dropTintColor = it.getColor(R.styleable.rain_dropTintColor,resources.getColor(android.R.color.white))
             fallToDropTime = it.getInt(R.styleable.rain_durationOfDropTime,100)
@@ -78,7 +78,7 @@ class RainlayoutView : ConstraintLayout {
                     context,
                     this@RainlayoutView.findViewById(R.id.rl_animation) as RelativeLayout,
                     fallToDropTime,
-                    rainSrc,
+                    dropSrc,
                     dropTintColor,
                     isColorful)
                 delay((1000/dropPerSecond).toLong())

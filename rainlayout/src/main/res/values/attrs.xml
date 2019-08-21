@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="rain">
-        <attr name="rainSrc" format="reference"/>
+        <attr name="dropSrc" format="reference"/>
         <attr name="dropPerSecond" format="integer"/>
         <attr name="dropTintColor" format="color"/>
         <attr name="durationOfDropTime" format="integer"/>

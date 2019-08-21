@@ -4,12 +4,12 @@
         android:layout_height="match_parent"
         android:id="@+id/rainview"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:background="@android:color/holo_orange_light"
+        android:background="@android:color/holo_blue_dark"
         xmlns:android="http://schemas.android.com/apk/res/android"
         app:isColorful="true"
-        app:dropPerSecond="1"
-        app:durationOfDropTime="500"
-        app:rainSrc="@drawable/umbrella"
+        app:dropPerSecond="10"
+        app:durationOfDropTime="1000"
+        app:dropSrc="@drawable/umbrella"
         app:dropTintColor="@color/colorPrimary"
 >
 
