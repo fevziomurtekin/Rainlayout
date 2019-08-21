@@ -1,10 +1,8 @@
-package com.fevziomurtekin.rainground
+package com.fevziomurtekin.widget
 
-import android.app.Activity
 import android.content.Context
-import android.graphics.Point
 
-object RaingroundExt {
+object RainlayoutExt {
 
     fun getWidth(context: Context?):Int = context?.resources?.displayMetrics?.widthPixels.let {
         it ?: 0
