@@ -31,6 +31,7 @@ dependencies {
 }
 ```
 
+
 > Warning : To Stop the animation in Activity / Fragment changes!
 
 ```kotlin
@@ -39,6 +40,8 @@ dependencies {
         rainview.animationClear()
     }
 ```
+
+
 
 
 ## Layout
