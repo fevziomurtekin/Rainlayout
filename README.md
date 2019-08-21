@@ -25,7 +25,7 @@ allprojects {
   .....
 
 dependencies {
-      implementation 'com.github.fevziomurtekin:Rainlayout:1.0.0'
+      implementation 'com.github.fevziomurtekin:Rainlayout:1.1'
    }
 }
 ```
