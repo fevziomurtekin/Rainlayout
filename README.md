@@ -5,7 +5,7 @@ Constraintlayout based, rain animated layout's
 
 <br>
 
-[![](https://jitpack.io/v/fevziomurtekin/BeforeAfterView.svg)](https://jitpack.io/#fevziomurtekin/BeforeAfterView)
+[![](https://jitpack.io/v/fevziomurtekin/Rainlayout.svg)](https://jitpack.io/#fevziomurtekin/Rainlayout)
 
 # Demo
 
