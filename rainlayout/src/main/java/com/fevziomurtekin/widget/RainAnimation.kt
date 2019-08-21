@@ -5,6 +5,7 @@ import android.animation.ObjectAnimator
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
+import android.graphics.drawable.Drawable
 import android.view.ViewGroup
 import android.view.animation.AccelerateInterpolator
 import android.widget.ImageView
@@ -27,7 +28,7 @@ object RainAnimation {
         context: Context?,
         parentView: RelativeLayout,
         fallTime:Int,
-        resourceId: Int,
+        src: Drawable,
         childColor:Int,
         isColorful: Boolean
     ) {
@@ -44,7 +45,7 @@ object RainAnimation {
             val iv = ImageView(context)
             parentView.addView(iv)
             iv.apply {
-                setImageResource(resourceId)
+                setImageDrawable(src)
                 x = startX
                 scaleY = scaleView
                 scaleY = scaleView

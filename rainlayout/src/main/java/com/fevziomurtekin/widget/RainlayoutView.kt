@@ -12,9 +12,9 @@ import kotlinx.coroutines.*
 class RainlayoutView : ConstraintLayout {
 
     /** attributes of layout **/
-    private var rainSrc = R.drawable.ic_umbrella
+    private var rainSrc = resources.getDrawable(R.drawable.ic_umbrella)
     private var dropPerSecond = 10
-    private var dropTintColor = android.R.color.white
+    private var dropTintColor = resources.getColor(android.R.color.white)
     private var fallToDropTime = 100
     private var isColorful = false
 
@@ -25,7 +25,6 @@ class RainlayoutView : ConstraintLayout {
      * Since we pass viewModelJob, you can cancel all coroutines
      * launched by uiScope by calling viewModelJob.cancel()
      */
-
     private var uiScope = CoroutineScope(Dispatchers.Main + animationJob)
 
     constructor(context: Context?) : super(context) { init(context,null,0,0) }
@@ -36,11 +35,12 @@ class RainlayoutView : ConstraintLayout {
 
     private fun init(context: Context?,attrs:AttributeSet?,defStyleAttr: Int,defStyleRes: Int){
         context?.theme?.obtainStyledAttributes(attrs,R.styleable.rain,defStyleAttr,defStyleRes)?.let {
-            rainSrc = it.getInt(R.styleable.rain_rainSrc,R.drawable.ic_umbrella)
+            rainSrc = it.getDrawable(R.styleable.rain_rainSrc)
             dropPerSecond = it.getInt(R.styleable.rain_dropPerSecond,10)
-            dropTintColor = it.getInt(R.styleable.rain_dropTintColor,android.R.color.white)
-            fallToDropTime = it.getInt(R.styleable.rain_fallToDropTime,100)
+            dropTintColor = it.getColor(R.styleable.rain_dropTintColor,resources.getColor(android.R.color.white))
+            fallToDropTime = it.getInt(R.styleable.rain_durationOfDropTime,100)
             isColorful = it.getBoolean(R.styleable.rain_isColorful,false)
+            it.recycle()
             initViews()
         }
     }
@@ -49,18 +49,19 @@ class RainlayoutView : ConstraintLayout {
     private fun initViews(){
         val view = LayoutInflater.from(context!!).inflate(R.layout.lib_layout,null)
         this@RainlayoutView.apply {
-            val clAnimation = view.findViewById<ConstraintLayout>(R.id.cl_lib_layout)
+            val rlAnimation = view.findViewById<RelativeLayout>(R.id.rl_animation)
             val constraintSet = ConstraintSet()
             constraintSet.clone(this)
-            addView(view)
+            addView(rlAnimation)
             constraintSet.apply {
-                connect(clAnimation.id,ConstraintSet.RIGHT,this@RainlayoutView.id,ConstraintSet.RIGHT,0)
-                connect(clAnimation.id,ConstraintSet.LEFT,this@RainlayoutView.id,ConstraintSet.LEFT,0)
-                connect(clAnimation.id,ConstraintSet.TOP,this@RainlayoutView.id,ConstraintSet.TOP,0)
-                connect(clAnimation.id,ConstraintSet.BOTTOM,this@RainlayoutView.id,ConstraintSet.BOTTOM,0)
+                connect(rlAnimation.id,ConstraintSet.RIGHT,this@RainlayoutView.id,ConstraintSet.RIGHT,0)
+                connect(rlAnimation.id,ConstraintSet.LEFT,this@RainlayoutView.id,ConstraintSet.LEFT,0)
+                connect(rlAnimation.id,ConstraintSet.TOP,this@RainlayoutView.id,ConstraintSet.TOP,0)
+                connect(rlAnimation.id,ConstraintSet.BOTTOM,this@RainlayoutView.id,ConstraintSet.BOTTOM,0)
             }
             constraintSet.applyTo(this)
         }
+        this@RainlayoutView.requestLayout()
         showAnimation()
     }
 

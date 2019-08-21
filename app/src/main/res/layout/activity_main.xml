@@ -2,8 +2,17 @@
 <com.fevziomurtekin.widget.RainlayoutView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/baseView"
+        android:id="@+id/rainview"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:background="@android:color/holo_orange_light"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        app:isColorful="true"
+        app:dropPerSecond="1"
+        app:durationOfDropTime="500"
+        app:rainSrc="@drawable/umbrella"
+        app:dropTintColor="@color/colorPrimary"
+>
+
 
 </com.fevziomurtekin.widget.RainlayoutView>
+
