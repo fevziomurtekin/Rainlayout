@@ -1,6 +1,6 @@
 # Rainlayout
 
-Constraintlayout based rain-animation view developed using Coroutines.
+Constraintlayout based rain-animation view developed backed by Kotlin Coroutines.
 
 <br>
 
