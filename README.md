@@ -5,7 +5,7 @@ Constraintlayout based rain-animation view developed backed by Kotlin Coroutines
 <br>
 
 [![](https://jitpack.io/v/fevziomurtekin/Rainlayout.svg)](https://jitpack.io/#fevziomurtekin/Rainlayout)
-
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-Rainlayout-green.svg?style=flat )](https://android-arsenal.com/details/1/7864)
 # Demo
 
 <p align="center">
